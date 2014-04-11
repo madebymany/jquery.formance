@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
     <title>Formance.js by Omar Shammas</title>
-    
+
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/pygment_trac.css">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
@@ -130,6 +130,11 @@
             <p>Similar to documentation of <a href='#dd_mm_yyyy'>dd / mm / yyyy</a> except the format is <code>yyyy / mm / dd</code>.</p>
         </div>
 
+        <div class='field' id='mm_dd_yyyy'>
+            <h4>Date MM / DD / YYYY</h4>
+            <p> <input type="text" class='mm_dd_yyyy' placeholder="Date MM / DD / YYYY"> </p>
+        </div>
+
 
 
         <div class='field' id='email'>
@@ -192,10 +197,10 @@
             </ul>
             <div class="highlight highlight-javascript"><pre>
 <span class="nx">$</span><span class="p">(</span><span class="s2">"&lt;input value='123' /&gt;"</span><span class="p">).</span><span class="nx">formance</span><span class="p">(</span><span class="s1">'validate_credit_card_cvc'</span><span class="p">);</span>        <span class="c1">// true</span>
-<span class="nx">$</span><span class="p">(</span><span class="s2">"&lt;input value='1234' /&gt;"</span><span class="p">).</span><span class="nx">formance</span><span class="p">(</span><span class="s1">'validate_credit_card_cvc'</span><span class="p">);</span>       <span class="c1">// true</span> 
+<span class="nx">$</span><span class="p">(</span><span class="s2">"&lt;input value='1234' /&gt;"</span><span class="p">).</span><span class="nx">formance</span><span class="p">(</span><span class="s1">'validate_credit_card_cvc'</span><span class="p">);</span>       <span class="c1">// true</span>
 <span class="nx">$</span><span class="p">(</span><span class="s2">"&lt;input value='123' data-credit_card_type='amex' /&gt;"</span><span class="p">).</span><span class="nx">formance</span><span class="p">(</span><span class="s1">'validate_credit_card_cvc'</span><span class="p">);</span>   <span class="c1">// true</span>
 <span class="nx">$</span><span class="p">(</span><span class="s2">"&lt;input value='1234' data-credit_card_type='amex' /&gt;"</span><span class="p">).</span><span class="nx">formance</span><span class="p">(</span><span class="s1">'validate_credit_card_cvc'</span><span class="p">);</span>   <span class="c1">// true</span>
-<span class="nx">$</span><span class="p">(</span><span class="s2">"&lt;input value='12345' /&gt;"</span><span class="p">).</span><span class="nx">formance</span><span class="p">(</span><span class="s1">'validate_credit_card_cvc'</span><span class="p">);</span>      <span class="c1">// false</span> 
+<span class="nx">$</span><span class="p">(</span><span class="s2">"&lt;input value='12345' /&gt;"</span><span class="p">).</span><span class="nx">formance</span><span class="p">(</span><span class="s1">'validate_credit_card_cvc'</span><span class="p">);</span>      <span class="c1">// false</span>
             </pre></div>
 
         </div>
@@ -224,8 +229,8 @@
                 </li>
             </ul>
             <div class="highlight highlight-javascript"> <pre>
-<span class="nx">$</span><span class="p">(</span><span class="s1">'input.credit_card_expiry'</span><span class="p">).</span><span class="nx">formance</span><span class="p">(</span><span class="s1">'validate_credit_card_expiry'</span><span class="p">);</span> 
-<span class="c1">//examples</span> 
+<span class="nx">$</span><span class="p">(</span><span class="s1">'input.credit_card_expiry'</span><span class="p">).</span><span class="nx">formance</span><span class="p">(</span><span class="s1">'validate_credit_card_expiry'</span><span class="p">);</span>
+<span class="c1">//examples</span>
 <span class="nx">$</span><span class="p">(</span><span class="s2">"&lt;input value='05 / 20' /&gt;"</span><span class="p">).</span><span class="nx">formance</span><span class="p">(</span><span class="s1">'validate_credit_card_expiry'</span><span class="p">);</span>      <span class="c1">// true</span>
 <span class="nx">$</span><span class="p">(</span><span class="s2">"&lt;input value='05 / 2020' /&gt;"</span><span class="p">).</span><span class="nx">formance</span><span class="p">(</span><span class="s1">'validate_credit_card_expiry'</span><span class="p">);</span>   <span class="c1">// true</span>
 <span class="nx">$</span><span class="p">(</span><span class="s2">"&lt;input value='05 / 1900' /&gt;"</span><span class="p">).</span><span class="nx">formance</span><span class="p">(</span><span class="s1">'validate_credit_card_expiry'</span><span class="p">);</span>   <span class="c1">// false</span>
@@ -262,12 +267,12 @@
                 <li>Validates length</li>
             </ul>
             <div class="highlight highlight-javascript"> <pre>
-<span class="nx">$</span><span class="p">(</span><span class="s1">'input.credit_card_expiry'</span><span class="p">).</span><span class="nx">formance</span><span class="p">(</span><span class="s1">'validate_credit_card_number'</span><span class="p">);</span> 
-<span class="c1">//examples</span> 
-<span class="nx">$</span><span class="p">(</span><span class="s2">"&lt;input value='4242424242424242' /&gt;"</span><span class="p">).</span><span class="nx">formance</span><span class="p">(</span><span class="s1">'validate_credit_card_number'</span><span class="p">);</span>   <span class="c1">// true</span> 
-<span class="nx">$</span><span class="p">(</span><span class="s2">"&lt;input value='4242 4242 4242 4242' /&gt;"</span><span class="p">).</span><span class="nx">formance</span><span class="p">(</span><span class="s1">'validate_credit_card_number'</span><span class="p">);</span>   <span class="c1">// true</span> 
-<span class="nx">$</span><span class="p">(</span><span class="s2">"&lt;input value='4242-4242-4242-4242' /&gt;"</span><span class="p">).</span><span class="nx">formance</span><span class="p">(</span><span class="s1">'validate_credit_card_number'</span><span class="p">);</span>   <span class="c1">// true</span> 
-<span class="nx">$</span><span class="p">(</span><span class="s2">"&lt;input value='4242' /&gt;"</span><span class="p">).</span><span class="nx">formance</span><span class="p">(</span><span class="s1">'validate_credit_card_number'</span><span class="p">);</span>   <span class="c1">// false</span> 
+<span class="nx">$</span><span class="p">(</span><span class="s1">'input.credit_card_expiry'</span><span class="p">).</span><span class="nx">formance</span><span class="p">(</span><span class="s1">'validate_credit_card_number'</span><span class="p">);</span>
+<span class="c1">//examples</span>
+<span class="nx">$</span><span class="p">(</span><span class="s2">"&lt;input value='4242424242424242' /&gt;"</span><span class="p">).</span><span class="nx">formance</span><span class="p">(</span><span class="s1">'validate_credit_card_number'</span><span class="p">);</span>   <span class="c1">// true</span>
+<span class="nx">$</span><span class="p">(</span><span class="s2">"&lt;input value='4242 4242 4242 4242' /&gt;"</span><span class="p">).</span><span class="nx">formance</span><span class="p">(</span><span class="s1">'validate_credit_card_number'</span><span class="p">);</span>   <span class="c1">// true</span>
+<span class="nx">$</span><span class="p">(</span><span class="s2">"&lt;input value='4242-4242-4242-4242' /&gt;"</span><span class="p">).</span><span class="nx">formance</span><span class="p">(</span><span class="s1">'validate_credit_card_number'</span><span class="p">);</span>   <span class="c1">// true</span>
+<span class="nx">$</span><span class="p">(</span><span class="s2">"&lt;input value='4242' /&gt;"</span><span class="p">).</span><span class="nx">formance</span><span class="p">(</span><span class="s1">'validate_credit_card_number'</span><span class="p">);</span>   <span class="c1">// false</span>
              </pre></div>
 
             <p>This field includes a special helper function to retrieve the credit card type. It recognizes</p>
@@ -487,10 +492,10 @@
             </ul>
             <div class="highlight highlight-javascript">
             <pre>
-<span class="nx">$</span><span class="p">(</span><span class="s1">'input.time_yy_mm'</span><span class="p">).</span><span class="nx">formance</span><span class="p">(</span><span class="s1">'validate_time_yy_mm'</span><span class="p">);</span> 
-<span class="c1">//examples</span> 
-<span class="nx">$</span><span class="p">(</span><span class="s2">"&lt;input value='09 / 09' /&gt;"</span><span class="p">).</span><span class="nx">formance</span><span class="p">(</span><span class="s1">'validate_time_yy_mm'</span><span class="p">);</span>   <span class="c1">// true</span> 
-<span class="nx">$</span><span class="p">(</span><span class="s2">"&lt;input value='10 /' /&gt;"</span><span class="p">).</span><span class="nx">formance</span><span class="p">(</span><span class="s1">'validate_time_yy_mm'</span><span class="p">);</span>   <span class="c1">// false</span> 
+<span class="nx">$</span><span class="p">(</span><span class="s1">'input.time_yy_mm'</span><span class="p">).</span><span class="nx">formance</span><span class="p">(</span><span class="s1">'validate_time_yy_mm'</span><span class="p">);</span>
+<span class="c1">//examples</span>
+<span class="nx">$</span><span class="p">(</span><span class="s2">"&lt;input value='09 / 09' /&gt;"</span><span class="p">).</span><span class="nx">formance</span><span class="p">(</span><span class="s1">'validate_time_yy_mm'</span><span class="p">);</span>   <span class="c1">// true</span>
+<span class="nx">$</span><span class="p">(</span><span class="s2">"&lt;input value='10 /' /&gt;"</span><span class="p">).</span><span class="nx">formance</span><span class="p">(</span><span class="s1">'validate_time_yy_mm'</span><span class="p">);</span>   <span class="c1">// false</span>
              </pre></div>
 
         </div>
@@ -517,14 +522,14 @@
             </ul>
             <div class="highlight highlight-javascript">
             <pre>
-<span class="nx">$</span><span class="p">(</span><span class="s1">'input.uk_sort_code'</span><span class="p">).</span><span class="nx">formance</span><span class="p">(</span><span class="s1">'validate_uk_sort_code'</span><span class="p">);</span> 
-<span class="c1">//examples</span> 
-<span class="nx">$</span><span class="p">(</span><span class="s2">"&lt;input value='09 - 09 - 09' /&gt;"</span><span class="p">).</span><span class="nx">formance</span><span class="p">(</span><span class="s1">'validate_uk_sort_code'</span><span class="p">);</span>   <span class="c1">// true</span> 
-<span class="nx">$</span><span class="p">(</span><span class="s2">"&lt;input value='00 -' /&gt;"</span><span class="p">).</span><span class="nx">formance</span><span class="p">(</span><span class="s1">'validate_uk_sort_code'</span><span class="p">);</span>   <span class="c1">// false</span> 
+<span class="nx">$</span><span class="p">(</span><span class="s1">'input.uk_sort_code'</span><span class="p">).</span><span class="nx">formance</span><span class="p">(</span><span class="s1">'validate_uk_sort_code'</span><span class="p">);</span>
+<span class="c1">//examples</span>
+<span class="nx">$</span><span class="p">(</span><span class="s2">"&lt;input value='09 - 09 - 09' /&gt;"</span><span class="p">).</span><span class="nx">formance</span><span class="p">(</span><span class="s1">'validate_uk_sort_code'</span><span class="p">);</span>   <span class="c1">// true</span>
+<span class="nx">$</span><span class="p">(</span><span class="s2">"&lt;input value='00 -' /&gt;"</span><span class="p">).</span><span class="nx">formance</span><span class="p">(</span><span class="s1">'validate_uk_sort_code'</span><span class="p">);</span>   <span class="c1">// false</span>
              </pre></div>
 
         </div>
-          
+
 
       </section>
       <footer>
@@ -535,7 +540,7 @@
 <!-- Javascript at the bottom for faster loading -->
     <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
     <script src="js/scale.fix.js"></script>
-    <script src="js/jquery.formance.min.js" /></script>
+    <script src="js/jquery.formance.js" /></script>
     <script src="js/awesome_form.js"></script>
   </body>
 </html>

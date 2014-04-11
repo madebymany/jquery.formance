@@ -4,6 +4,7 @@ jQuery(function($){
               'credit_card_cvc',
               'dd_mm_yyyy',
               'yyyy_mm_dd',
+              'mm_dd_yyyy',
               'email',
               'number',
               'phone_number',
